@@ -13,7 +13,7 @@ window.onload = function(){
     });
 }
 
-// Eliminar essa função
+// Eliminar essa função nova função
 $click.addEventListener("click", function(){
     if(document.querySelector(".menu .menu-nav ul").style.display == "block"){
         document.querySelector(".menu .menu-nav ul").style.display = "none";
