@@ -1,7 +1,4 @@
-
-$click = document.getElementsByTagName("a"); // tirar isso depois
-
-
+// função para abrir e fechar o menu
 window.onload = function(){
     document.querySelector(".m-mobile").addEventListener("click", function(){
         if(document.querySelector(".menu .menu-nav ul ").style.display == "block"){
@@ -13,9 +10,11 @@ window.onload = function(){
     });
 }
 
-// Eliminar essa função nova função
-$click.addEventListener("click", function(){
-    if(document.querySelector(".menu .menu-nav ul").style.display == "block"){
-        document.querySelector(".menu .menu-nav ul").style.display = "none";
-    };
-})
+//função está sendo chamada na tag a, para fechar o menu ao ser clicado
+function FecharMenu(){
+    var $menu =   document.querySelector(".menu .menu-nav ul");
+
+    if ($menu.style.display == "block"){
+        $menu.style.display = "none";
+    }
+}
