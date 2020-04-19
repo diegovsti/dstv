@@ -42,11 +42,9 @@ a.btn:hover {
 /* menu */
 .menu {
     background: #B4B9E4;
-     position: fixed;
-    width: 100%;
-    /* max-width: 960px; */
-    /* height: 80px; */
-    /* z-index: 2; */
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 .logo-marca {
     float: left;
@@ -57,23 +55,25 @@ a.btn:hover {
 }
 
 .menu-nav ul{ float: right; line-height: 30px;}
-.menu-nav ul li{ display: inline-block; }
-.menu-nav li a{
-    text-decoration: none;
+.menu-nav ul li {
     padding: 10px; 
-    margin-right: 10px;
+    margin-left: 10px;
     color: #4853B7;
     font-size: 1.125em;
     line-height: 50px;
+    display: inline-block; 
 }
-.menu-nav li a.teste {
+.menu-nav ul a{
+    text-decoration: none;
+}
+ a.teste li {
     color: #888;
 }
 
 
 /* introdução */
 .intro{
-    padding: 80px 0;
+    padding: 10px 0;
 }
 .intro-item {
     float: left;
@@ -92,7 +92,7 @@ a.btn:hover {
 
 /* sobre */ 
 .sobre {
-    padding: 80px 0;
+    padding-top: 55px;
 }
 .sobre-item p:first-child{
     padding-top: 80px;
@@ -115,7 +115,7 @@ a.btn:hover {
 
 /* quem somos */
 .quem-somos {
-    padding: 80px 0;
+    padding-top: 55px;
 }
 .quem-somos p {
     max-width: 820px;
@@ -128,7 +128,7 @@ a.btn:hover {
 
 /* planos */
 .planos {
-    padding: 80px 0;
+    padding-top: 55px;
     margin-bottom: 40px;
 }
 .planos-item {
@@ -173,7 +173,7 @@ a.btn:hover {
 
 /* teste gratis */
 .teste-gratis {
-    padding: 100px 0 60px 0;
+    padding: 55px 0 60px 0;
     background: linear-gradient(#B4B9E4, #4853B7);
 }
 .teste-gratis p{
@@ -207,7 +207,7 @@ a.btn:hover {
 
 /* Depoismentos */
 .depoimentos{
-    padding: 80px 0;
+    padding-top: 55px;
     margin-bottom: 30px;
 }
 .depoimentos-item {
@@ -253,7 +253,7 @@ a.btn:hover {
 
 /* contatos */
 .contatos {
-    padding: 80px 0;
+    padding-top: 55px;
 }
 .contatos article{
     padding: 10px 0;
@@ -431,69 +431,89 @@ a.btn:hover {
 }
 @media (max-width: 739px){
  
-    .menu {
-        width: 460px;
-    }
+
     .menu-nav ul{
         display: none;
         position: relative;
-        width: 460px;
-        left: 80px;
+        width: 300px;
         background: #B4B9E4;
  
     }
     .menu-nav ul li {
         display:block;
         padding: 0;
-        margin-right: 20px;
     }
     .menu-nav ul li a{
         padding: 10px;
     }
     .logo-marca {
         float: none;
+        margin-left: 10px;
     }
     .menu-nav {
         float: none;
     }
     .m-mobile{
-        right:  20px;
         display: block;
         margin-top: -45px;
+        margin-right: 10px;
     }
 
-    .intro, .sobre, .quem-somos, .planos,
+    .intro, .quem-somos, .planos,
     .teste-gratis, .depoimentos, .contatos, .footer {
-        width: 460px;
+        width: 300px;
         padding: 80px 0 20px 0;
     }
+
+    .sobre{
+        padding-top: 40px;
+    }
     .intro-item p {
-        font-size: 1em;
+        width: 280px;
+        font-size: .9em;
         margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
     }
 
     .sobre-item p{
-        font-size: .8em;
-        width: 300px;
+        font-size: .7em;
+        width: 285px;
         margin-bottom: 20px;
     }
 
     .quem-somos p {
-        font-size: .8em;
-        width: 300px;
+        font-size: .7em;
+        width: 285px;
     }
 
     .planos  h2 {
         font-size: 2em;
     }
+    .planos-item {
+        width: 280px;
+    }
 
     .teste-gratis p {
         font-size: 1em;
+        margin: 0 auto;
     }
 
+    .depoimentos-item{
+        width: 280px;
+        margin: 20px;
+    }
+    .depoimentos-item img {
+        width: 40px;
+        height: 40px;
+    }
     .depoimentos-item p {
         font-size: .8em;
-        width: 230px;
+        width: 220px;
+    }
+
+    .depoimentos-item span {
+        margin-right: 5px;
     }
 
     .contatos input {
@@ -501,10 +521,18 @@ a.btn:hover {
     }
 
     .contatos-info div {
-        width: 300px;
+        width: 280px;
+        margin-left: 15px;
     }
     .contatos-info p{
-        width: 250px;
+        width: 220px;
+    }
+    .contatos article {
+        padding: 0;
+    }
+
+    iframe {
+        padding: 0;
     }
     .footer {
         padding: 40x 0 20px 0;
@@ -512,11 +540,18 @@ a.btn:hover {
     .footer-info p {
         font-size: .8em;
         margin-bottom: 10px;
+        margin-left: 15px;
     }
     .redes-sociais a img {
         width: 32px;
         height: 32px;
         margin-left: 20px;
-        
+    }
+
+    .teste-contatos p{
+        margin-right: 0;
+        padding-right: 0;
+        width: 290px;
+        font-size: 1.2em;
     }
 }
